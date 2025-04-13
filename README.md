@@ -2,8 +2,6 @@
 
 This is a robust Test Automation Framework built using **Java**, **Selenium WebDriver**, **TestNG**, and **Extent Reports**. It supports both **local execution** and **cloud-based execution** on [LambdaTest](https://www.lambdatest.com/), a cross-browser testing platform.
 
-
-
 ## 📦 Tech Stack
 
 - Java 11+
@@ -70,7 +68,33 @@ This architecture lays a strong foundation for building advanced testing feature
 ├── .env                  # Secure environment config
 ├── resources/testng.xml  # TestNG suite configuration
 └── pom.xml               # Maven dependencies
+
 ```
 
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/lambdatest-automation-framework.git
+cd lambdatest
+```
+
+### 2. Add environment variables
+
+Create a `.env` file in the root directory:
+
+```dotenv
+LT_USERNAME=your-lambdatest-username
+LT_ACCESS_KEY=your-lambdatest-access-key
+RUN_MODE=lambdatest   # or 'local'
+APP_USERNAME=application_username
+APP_PASSWORD=application_password
+
+```
+
+**ℹ️ .env Setup Tip**: Make sure to include the `.env` file at the root level of the project. It should not be committed to version control. Add sensitive or environment-specific config here for seamless integration.
+
 ---
+
 
