@@ -2,6 +2,8 @@
 
 This is a robust Test Automation Framework built using **Java**, **Selenium WebDriver**, **TestNG**, and **Extent Reports**. It supports both **local execution** and **cloud-based execution** on [LambdaTest](https://www.lambdatest.com/), a cross-browser testing platform.
 
+
+
 ## 📦 Tech Stack
 
 - Java 11+
@@ -40,12 +42,13 @@ This framework was built with scalability, readability, and maintainability in m
 
 For this assessment, I chose to build a custom framework design instead of following the standard PageFactory model.
 
-The PageFactory model has two major limitations in my opinion:
+The PageFactory model has three major limitations in my opinion:
 
 1. **Lack of flexibility with dynamic locators**: It's challenging to define XPath or CSS selectors that adapt to dynamic text or element structure within PageFactory.
 2. **Tight coupling of locators and logic**: PageFactory binds WebElements directly to page classes, which hinders test readability and maintainability when the UI changes.
-
-In contrast, my design separates **Page Locators** and their **Utility Functions**, enabling a cleaner abstraction. This makes it easier to handle dynamic components and improves the overall modularity of the codebase.
+3. **Redunt Page object creation**: Need to create Page Objects inside every test class.
+   
+In contrast, my design separates **Page Locators** and their **Utility Functions**, and creates their objects in BaseTest enabling a cleaner abstraction. This makes it easier to handle dynamic components and improves the overall modularity of the codebase.
 
 This architecture lays a strong foundation for building advanced testing features such as:
 
