@@ -1,0 +1,21 @@
+<suite name="LambdaTestSuite" parallel="methods" thread-count="2">
+
+    <test name="LoginTests">
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="JSAlertTests">
+        <classes>
+            <class name="tests.JSAlertTests"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="Listeners.RetryListener" />
+        <listener class-name="Listeners.SuiteListener" />
+        <listener class-name="Listeners.TestListener" />
+    </listeners>
+
+</suite>
